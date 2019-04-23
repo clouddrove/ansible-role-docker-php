@@ -1,0 +1,8 @@
+---
+- name: restart php
+  service:
+    name: php
+    state: restarted
+    enabled: yes
+
+

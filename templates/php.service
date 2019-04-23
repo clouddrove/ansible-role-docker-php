@@ -1,0 +1,10 @@
+[Unit]
+Description=PHP Server
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStart=/usr/local/bin/php
+
+[Install]
+WantedBy=multi-user.target

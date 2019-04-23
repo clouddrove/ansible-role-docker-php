@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+
+chmod -R 777 /var/log/
+mkdir -p /var/run/php/
+mkdir -p /run/php/
+PHP_VERSION="7.3.3"
+set -eux -o pipefail
+
+# pull the image before so we dont first remove the container and then pull
+docker pull clouddrove/php:${PHP_VERSION}-fpm
+
+docker rm -f -v php || :
+
+docker run -u root --net=host --rm --name=php \
+	-v /var/www:/var/www:rw \
+	-v /etc/ssh/ssh_config:/etc/ssh/ssh_config:rw \
+	clouddrove/php:${PHP_VERSION}-fpm

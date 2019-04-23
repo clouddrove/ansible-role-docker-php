@@ -1,0 +1,22 @@
+---
+
+- name: copy php script
+  template:
+    src: "php"
+    dest: /usr/local/bin/php
+    mode: 0755
+    owner: root
+    group: root
+    
+- name: copy php script
+  template:
+    src: "php.service"
+    dest: /etc/systemd/system/php.service
+    mode: 0644
+    owner: root
+    group: root    
+
+- name: reload systemd
+  command: systemctl daemon-reload
+  notify:
+    - restart php

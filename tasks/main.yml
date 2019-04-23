@@ -1,0 +1,7 @@
+---
+
+- import_tasks: users.yml
+- import_tasks: configure.yml
+- import_tasks: install.yml
+
+
