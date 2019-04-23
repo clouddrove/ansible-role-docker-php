@@ -1,15 +1,12 @@
 ---
+
 - name: setup group
   group:
-    name="{{ php_group }}"
-    system=yes
-  tags:
-    - php
+    name: "{{ php_group }}"
+    system: yes
 
 - name: setup user
   user:
-    name="{{ php_user }}"
-    system=yes
-    group="{{ php_group }}"
-  tags:
-    - php
+    name: "{{ php_user }}"
+    system: yes
+    group: "{{ php_group }}"
