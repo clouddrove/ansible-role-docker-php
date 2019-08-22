@@ -1,9 +1,10 @@
 ---
+
 dependencies: []
 
 galaxy_info:
-  author: anmolnagpal
-  description: Install common packages
+  author: clouddrove
+  description: This ansible role is used to install PHP  into Docker.
   company: "CloudDrove, LLC"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
@@ -18,5 +19,6 @@ galaxy_info:
         - xenial
         - bionic
   galaxy_tags:
-    - system
-    - server
+    - php
+    - docker
+    - composer
