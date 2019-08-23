@@ -4,5 +4,3 @@ php_user: www-data
 php_group: www-data
 php_opt_dir: "/opt/php"
 php_config_dir: "{{ php_opt_dir }}/config"
-php_log_dir: "/var/log/php"
-

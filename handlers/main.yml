@@ -3,6 +3,14 @@
   service:
     name: php
     state: restarted
-    enabled: yes
+    enabled: true
 
+- name: start php
+  service:
+    name: php
+    state: started
 
+- name: reload ph
+  service:
+    name: php
+    state: reloaded

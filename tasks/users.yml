@@ -3,10 +3,10 @@
 - name: setup group
   group:
     name: "{{ php_group }}"
-    system: yes
+    system: true
 
 - name: setup user
   user:
     name: "{{ php_user }}"
-    system: yes
+    system: true
     group: "{{ php_group }}"

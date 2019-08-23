@@ -6,12 +6,24 @@
     owner: "{{ php_user }}"
     group: "{{ php_group }}"
     mode: 0777
-    recurse: yes
+    recurse: true
   changed_when: "False"
   with_items:
     - "{{ php_opt_dir }}"
-    - "{{ php_log_dir }}"
     - "{{ php_config_dir }}"
     - "{{ php_config_dir }}/pool"
-  tags:
-    - php
+
+- name: transfer pool.d php configuration
+  template:
+    src: "{{ item }}"
+    dest: "{{ php_config_dir }}/pool/{{ item | basename }}"
+    force: true
+  with_fileglob:
+    - ../templates/config/pool.d/*.conf
+
+
+- name: transfer php.ini php-fpm configuration
+  template:
+    src: config/php.ini
+    dest: "{{ php_config_dir }}/php.ini"
+    force: true
