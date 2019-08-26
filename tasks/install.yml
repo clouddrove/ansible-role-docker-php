@@ -16,4 +16,4 @@
     owner: root
     group: root
   notify:
-    - restart php
+    - start php
