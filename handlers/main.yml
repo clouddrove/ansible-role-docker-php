@@ -10,7 +10,7 @@
     name: php
     state: started
 
-- name: reload ph
+- name: reload php
   service:
     name: php
     state: reloaded
