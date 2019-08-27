@@ -33,13 +33,13 @@
 </p>
 <p align="center">
 
-<a href='https://facebook.com/sharer/sharer.php?u=https://github.com/clouddrove/ansible-role-docker-php'>
+<a href='https://facebook.com/sharer/sharer.php?u=https://github.com/clouddrove/ansible-role-docekr-php'>
   <img title="Share on Facebook" src="https://user-images.githubusercontent.com/50652676/62817743-4f64cb80-bb59-11e9-90c7-b057252ded50.png" />
 </a>
-<a href='https://www.linkedin.com/shareArticle?mini=true&title=Ansible+Role+Docker+PHP&url=https://github.com/clouddrove/ansible-role-docker-php'>
+<a href='https://www.linkedin.com/shareArticle?mini=true&title=Ansible+Role+Docker+PHP&url=https://github.com/clouddrove/ansible-role-docekr-php'>
   <img title="Share on LinkedIn" src="https://user-images.githubusercontent.com/50652676/62817742-4e339e80-bb59-11e9-87b9-a1f68cae1049.png" />
 </a>
-<a href='https://twitter.com/intent/tweet/?text=Ansible+Role+Docker+PHP&url=https://github.com/clouddrove/ansible-role-docker-php'>
+<a href='https://twitter.com/intent/tweet/?text=Ansible+Role+Docker+PHP&url=https://github.com/clouddrove/ansible-role-docekr-php'>
   <img title="Share on Twitter" src="https://user-images.githubusercontent.com/50652676/62817740-4c69db00-bb59-11e9-8a79-3580fbbf6d5c.png" />
 </a>
 
@@ -81,13 +81,12 @@ Followiing things includes in this role:
 
 ## Example Playbook
 
-**IMPORTANT:** Since the `master` branch used in `source` varies based on new modifications, we suggest that you use the release versions [here](https://github.com/clouddrove/ansible-role-docker-php/releases).
+**IMPORTANT:** Since the `master` branch used in `source` varies based on new modifications, we suggest that you use the release versions [here](https://github.com/clouddrove/ansible-role-docekr-php/releases).
 
 
 ```yaml
 - hosts: localhost
-  remote_user: ubuntu
-  become: true
+  remote_user: root
   roles:
     - clouddrove.ansible_role_docker_php
 ```
@@ -116,9 +115,9 @@ Followiing things includes in this role:
 
 
 ## Feedback
-If you come accross a bug or have any feedback, please log it in our [issue tracker](https://github.com/clouddrove/ansible-role-docker-php/issues), or feel free to drop us an email at [hello@clouddrove.com](mailto:hello@clouddrove.com).
+If you come accross a bug or have any feedback, please log it in our [issue tracker](https://github.com/clouddrove/ansible-role-docekr-php/issues), or feel free to drop us an email at [hello@clouddrove.com](mailto:hello@clouddrove.com).
 
-If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/clouddrove/ansible-role-docker-php)!
+If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/clouddrove/ansible-role-docekr-php)!
 
 ## About us
 

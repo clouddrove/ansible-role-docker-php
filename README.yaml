@@ -11,7 +11,7 @@ name: Ansible Role Docker PHP
 license: "MIT"
 
 # Canonical GitHub repo
-github_repo: clouddrove/ansible-role-docker-php
+github_repo: clouddrove/ansible-role-docekr-php
 
 # Badges to display
 badges:
@@ -55,8 +55,7 @@ description: |-
 usage: |-
   ```yaml
   - hosts: localhost
-    remote_user: ubuntu
-    become: true
+    remote_user: root
     roles:
       - clouddrove.ansible_role_docker_php
   ```
