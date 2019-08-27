@@ -86,9 +86,8 @@ Followiing things includes in this role:
 
 ```yaml
 - hosts: localhost
-  remote_user: ubuntu
-  become: true
-  roles:
+  remote_user: root
+ roles:
     - clouddrove.ansible_role_docker_php
 ```
 
