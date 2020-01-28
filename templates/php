@@ -6,7 +6,7 @@ mkdir -p /run/php/
 set -eux -o pipefail
 
 # pull the image before so we dont first remove the container and then pull
-docker pull clouddrove/php:"{{ php_version }}"-fpm
+docker pull clouddrove/php:"{{ php_version }}"
 
 docker rm -f -v php || :
 
@@ -17,4 +17,4 @@ docker run -u root --net=host --rm --name=php \
 	-v {{ php_config_dir }}/pool/www.conf:/usr/local/etc/php-fpm.d/www.conf \
 	-v {{ php_config_dir }}/pool/upstream.conf:/usr/local/etc/php-fpm.d/upstream.conf  \
 	-v {{ php_config_dir }}/pool/queue.conf:/usr/local/etc/php-fpm.d/queue.conf  \
-	clouddrove/php:"{{ php_version }}"-fpm
+	clouddrove/php:"{{ php_version }}"
