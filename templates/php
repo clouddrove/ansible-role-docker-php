@@ -14,6 +14,6 @@ docker run -u root --net=host --rm --name=php \
 	-v /var/www:/var/www:rw \
 	-v /etc/ssh/ssh_config:/etc/ssh/ssh_config:rw \
 	-v {{ php_config_dir }}/php.ini:/usr/local/etc/php/php.ini \
-	-v {{ php_config_dir }}/pool.d/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf \
-	-v {{ php_config_dir }}/pool.d/extra-config.ini:/usr/local/etc/php-fpm.d/extra-config.ini  \
+	-v {{ php_config_dir }}/pool/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf \
+	-v {{ php_config_dir }}/pool/extra-config.ini:/usr/local/etc/php-fpm.d/extra-config.ini  \
 	clouddrove/php:"{{ php_version }}"
