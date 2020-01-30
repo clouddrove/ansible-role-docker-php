@@ -5,3 +5,9 @@ php_user: www-data
 php_group: www-data
 php_opt_dir: "/opt/php"
 php_config_dir: "{{ php_opt_dir }}/config"
+max_children: 300
+start_servers: 6
+min_spare_servers: 4
+max_spare_servers: 140
+max_requests: 10000
+memory_limit: 2048M
