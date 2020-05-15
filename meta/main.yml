@@ -20,7 +20,6 @@ galaxy_info:
         - bionic
     - name: EL
       versions:
-          - 7
   galaxy_tags:
     - php
     - docker
