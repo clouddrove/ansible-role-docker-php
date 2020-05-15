@@ -14,4 +14,3 @@
   service:
     name: php
     state: reloaded
-
