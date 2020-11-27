@@ -1,7 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  
+
   vars:
     example_test_var: "Nothing_to_see_here"
 

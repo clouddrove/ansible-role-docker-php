@@ -18,6 +18,12 @@ galaxy_info:
         - trusty
         - xenial
         - bionic
+    - name: CentOS
+      versions:
+        - 7
+    - name: Amazonlinux
+      versions:
+        - 2
     - name: EL
       versions:
   galaxy_tags:
@@ -27,3 +33,4 @@ galaxy_info:
     - ubuntu
     - cenos
     - linux
+    - amazonlinux

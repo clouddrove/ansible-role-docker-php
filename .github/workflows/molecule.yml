@@ -32,7 +32,7 @@ jobs:
            sudo apt-get update
            sudo apt-get install ansible -y
            pip3 install ansible molecule[docker] docker
-      
+
       - name: 'Run molecule on the ${{ matrix.node }}'
         if: ${{ github.event.label.name == 'molecule' }}
         run: |
@@ -41,7 +41,7 @@ jobs:
           cat file.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
         id: ls
-        
+
       - name: 'PR Comment'
         uses: actions-ecosystem/action-create-comment@v1
         with:
