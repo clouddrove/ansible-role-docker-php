@@ -1,5 +1,5 @@
 ---
-name: Lint
+name: Ansible molecule
 'on':
   pull_request:
   push:
@@ -11,6 +11,9 @@ jobs:
   test:
     name: Lint
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [archlinux, default]
 
     steps:
       - name: Check out the codebase.
@@ -30,13 +33,23 @@ jobs:
       - name: Run ansible-lint.
         run: ansible-lint
 
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install test dependencies.
+        run: pip3 install ansible molecule[docker] docker
+
+      - name: Run Molecule tests.
+        run: molecule test --scenario-name ${{ matrix.node }}
 
       - name: 'Slack Notification'
         uses: clouddrove/action-slack@v2
         with:
           status: ${{ job.status }}
           fields: repo,author
-          author_name: 'Clouddrove'
+          author_name: 'CloudDrove'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
