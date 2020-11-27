@@ -1,11 +1,10 @@
 ---
 name: Ansible molecule
-'on':
+on:
   pull_request:
-  push:
     branches:
       - master
-
+    types: [labeled]
 jobs:
 
   test:
@@ -13,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [archlinux, default]
+        node:
+          - ubuntu
+          - centos
+          - amazonlinux
 
     steps:
       - name: Check out the codebase.
@@ -25,25 +27,27 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install yamllint ansible-lint
-
-      - name: Run yamllint.
-        run: yamllint .
-
-      - name: Run ansible-lint.
-        run: ansible-lint
-
-      - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        if: ${{ github.event.label.name == 'molecule' }}
+        run: |
+           sudo apt-get update
+           sudo apt-get install ansible -y
+           pip3 install ansible molecule[docker] docker
+      
+      - name: 'Run molecule on the ${{ matrix.node }}'
+        if: ${{ github.event.label.name == 'molecule' }}
+        run: |
+          molecule test --scenario-name=${{ matrix.node }} > file.txt
+          echo 'output<<EOF' >> $GITHUB_ENV
+          cat file.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+        id: ls
+        
+      - name: 'PR Comment'
+        uses: actions-ecosystem/action-create-comment@v1
         with:
-          python-version: '3.x'
-
-      - name: Install test dependencies.
-        run: pip3 install ansible molecule[docker] docker
-
-      - name: Run Molecule tests.
-        run: molecule test --scenario-name ${{ matrix.node }}
-
+          github_token: ${{ secrets.GITHUB }}
+          body: |
+            ${{ env.output }}
       - name: 'Slack Notification'
         uses: clouddrove/action-slack@v2
         with:
@@ -51,6 +55,6 @@ jobs:
           fields: repo,author
           author_name: 'CloudDrove'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
         if: always()
