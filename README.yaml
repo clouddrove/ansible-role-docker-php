@@ -23,10 +23,10 @@ badges:
     image: "https://img.shields.io/badge/License-MIT-blue.svg"
     url: "LICENSE.md"
   - name: "Distribution"
-    image: "https://img.shields.io/badge/ubuntu-16.x-orange?style=flat&logo=ubuntu"
+    image: "https://img.shields.io/badge/ubuntu-18.x-orange?style=flat&logo=ubuntu"
     url: "https://ubuntu.com/"
   - name: "Distribution"
-    image: "https://img.shields.io/badge/ubuntu-18.x-orange?style=flat&logo=ubuntu"
+    image: "https://img.shields.io/badge/ubuntu-20.x-orange?style=flat&logo=ubuntu"
     url: "https://ubuntu.com/"
   - name: "Distribution"
     image: "https://img.shields.io/badge/centos-7.x-orange"
@@ -43,7 +43,7 @@ prerequesties:
 # yamllint enable
 # What Includes to display
 what_includes:
-  - name: "Php-7.3"
+  - name: "Php-8.0"
   - name: "Php-fpm"
   - name: "Pecl"
   - name: "Composer"
@@ -63,7 +63,7 @@ usage: |-
 # Variables use in the project
 variables: |-
   ```yaml
-      php_version: 7.3.3
+      php_version: 8.0.7-fpm
       php_user: www-data
       php_group: www-data
       php_opt_dir: "/opt/php"

@@ -17,6 +17,7 @@
   template:
     src: "{{ item }}"
     dest: "{{ php_config_dir }}/pool/{{ item | basename }}"
+    mode: 0777
     force: true
   with_fileglob:
     - ../templates/config/pool.d/*.conf
@@ -26,4 +27,5 @@
   template:
     src: config/php.ini
     dest: "{{ php_config_dir }}/php.ini"
+    mode: 0777
     force: true
