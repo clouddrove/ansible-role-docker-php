@@ -25,7 +25,13 @@
   <img src="https://img.shields.io/badge/ubuntu-20.x-orange?style=flat&logo=ubuntu" alt="Distribution">
 </a>
 <a href="https://www.centos.org/">
-  <img src="https://img.shields.io/badge/centos-7.x-orange" alt="Distribution">
+  <img src="https://img.shields.io/badge/centos-8.x-orange" alt="Distribution">
+</a>
+<a href="https://aws.amazon.com/amazon-linux-ami/">
+  <img src="https://img.shields.io/badge/Amazone_linux-2-yellow?style=flat&logo=linux" alt="Distribution">
+</a>
+<a href="https://github.com/clouddrove/ansible-role-docker-php/actions/workflows/lint.yml">
+  <img src="https://github.com/clouddrove/ansible-role-docker-php/actions/workflows/lint.yml/badge.svg" alt="Actions">
 </a>
 
 </p>
