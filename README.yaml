@@ -37,7 +37,7 @@ badges:
 # Prerequesties to display
 # yamllint disable
 prerequesties:
-  - name: "Ansible2.8"
+  - name: "Ansible2.9"
     url: "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
   - name: "Python"
     url: "https://www.python.org/downloads"
