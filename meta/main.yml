@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: Anmol Nagpal
-  description: This ansible role install common packages On Ubuntu, CentOS Amazon-Linux.
+  description: This Ansible role installs PHP on Docker in Ubuntu, CentOS Amazon-Linux.
   company: "CloudDrove Inc."
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4

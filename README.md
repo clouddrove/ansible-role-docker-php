@@ -13,7 +13,7 @@
 <p align="center">
 
 <a href="https://www.ansible.com">
-  <img src="https://img.shields.io/badge/Ansible-2.8-green?style=flat&logo=ansible" alt="Ansible">
+  <img src="https://img.shields.io/badge/Ansible-2.9-green?style=flat&logo=ansible" alt="Ansible">
 </a>
 <a href="LICENSE.md">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licence">
