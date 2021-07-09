@@ -29,7 +29,7 @@ badges:
     image: "https://img.shields.io/badge/CentOS-8-green?style=flat&logo=centos"
     url: "https://www.centos.org/"
   - name: "Distribution"
-    image: "https://img.shields.io/badge/Amazone_linux-2-yellow?style=flat&logo=linux"
+    image: "https://img.shields.io/badge/Amazon_linux-2-yellow?style=flat&logo=linux"
     url: "https://aws.amazon.com/amazon-linux-ami/"
   - name: "Actions"
     image: "https://github.com/clouddrove/ansible-role-docker-php/actions/workflows/lint.yml/badge.svg"
