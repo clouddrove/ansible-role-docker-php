@@ -58,7 +58,7 @@ Smaller roles are created for each environment elements; which also include task
 
 This module has a few dependencies:
 
-- [Ansible2.8](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+- [Ansible2.9](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 - [Python](https://www.python.org/downloads)
 - [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu)
 
