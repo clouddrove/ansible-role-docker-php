@@ -5,7 +5,7 @@
     state: directory
     owner: "{{ php_user }}"
     group: "{{ php_group }}"
-    mode: 0777
+    mode: 0755
     recurse: true
   changed_when: "False"
   with_items:
@@ -17,6 +17,7 @@
   template:
     src: "{{ item }}"
     dest: "{{ php_config_dir }}/pool/{{ item | basename }}"
+    mode: 0755
     force: true
   with_fileglob:
     - ../templates/config/pool.d/*.conf
@@ -26,4 +27,5 @@
   template:
     src: config/php.ini
     dest: "{{ php_config_dir }}/php.ini"
+    mode: 0755
     force: true

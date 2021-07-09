@@ -17,20 +17,23 @@ github_repo: clouddrove/ansible-role-docker-php
 # Badges to display
 badges:
   - name: "Ansible"
-    image: "https://img.shields.io/badge/Ansible-2.8-green?style=flat&logo=ansible"
+    image: "https://img.shields.io/badge/Ansible-2.9-green?style=flat&logo=ansible"
     url: "https://www.ansible.com"
   - name: "Licence"
     image: "https://img.shields.io/badge/License-MIT-blue.svg"
     url: "LICENSE.md"
   - name: "Distribution"
-    image: "https://img.shields.io/badge/ubuntu-16.x-orange?style=flat&logo=ubuntu"
+    image: "https://img.shields.io/badge/ubuntu-20.x-orange?style=flat&logo=ubuntu"
     url: "https://ubuntu.com/"
   - name: "Distribution"
-    image: "https://img.shields.io/badge/ubuntu-18.x-orange?style=flat&logo=ubuntu"
-    url: "https://ubuntu.com/"
-  - name: "Distribution"
-    image: "https://img.shields.io/badge/centos-7.x-orange"
+    image: "https://img.shields.io/badge/CentOS-8-green?style=flat&logo=centos"
     url: "https://www.centos.org/"
+  - name: "Distribution"
+    image: "https://img.shields.io/badge/Amazone_linux-2-yellow?style=flat&logo=linux"
+    url: "https://aws.amazon.com/amazon-linux-ami/"
+  - name: "Actions"
+    image: "https://github.com/clouddrove/ansible-role-docker-php/actions/workflows/lint.yml/badge.svg"
+    url: "https://github.com/clouddrove/ansible-role-docker-php/actions/workflows/lint.yml"
 # Prerequesties to display
 # yamllint disable
 prerequesties:
@@ -43,7 +46,7 @@ prerequesties:
 # yamllint enable
 # What Includes to display
 what_includes:
-  - name: "Php-7.3"
+  - name: "Php-8.0"
   - name: "Php-fpm"
   - name: "Pecl"
   - name: "Composer"
@@ -63,7 +66,7 @@ usage: |-
 # Variables use in the project
 variables: |-
   ```yaml
-      php_version: 7.3.3
+      php_version: 8.0.7-fpm
       php_user: www-data
       php_group: www-data
       php_opt_dir: "/opt/php"
