@@ -3,12 +3,13 @@ dependencies: []
 
 galaxy_info:
   author: Anmol Nagpal
-  description: This ansible role installs PHP on Docker.
+  description: This Ansible role install PHP On Ubuntu, CentOS Amazon-Linux With Docker
   company: "CloudDrove Inc."
   license: "license (BSD, MIT)"
   role_name: ansible_role_docker_php
-  namespace: clouddrove
-  min_ansible_version: 2.4
+  namespace: CloudDrove
+  min_ansible_version: 2.8
+
   platforms:
     - name: Debian
       versions:
@@ -38,4 +39,4 @@ galaxy_info:
     - ubuntu
     - cenos
     - linux
-    - amazonlinux
+    - amazon

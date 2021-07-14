@@ -53,7 +53,7 @@ what_includes:
 
 #  description of this project
 description: |-
-  This ansible role is used to install PHP  with docker on linux.
+  This Ansible role install PHP On Ubuntu, CentOS Amazon-Linux With Docker.
 
 # How to use this project
 usage: |-
