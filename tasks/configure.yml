@@ -1,6 +1,6 @@
 ---
-- name: create php dirs
-  file:
+- name: Create php dirs
+  ansible.builtin.file:
     path: "{{ item|safe|trim }}"
     state: directory
     owner: "{{ php_user }}"
@@ -13,8 +13,8 @@
     - "{{ php_config_dir }}"
     - "{{ php_config_dir }}/pool"
 
-- name: transfer pool.d php configuration
-  template:
+- name: Transfer pool.d php configuration
+  ansible.builtin.template:
     src: "{{ item }}"
     dest: "{{ php_config_dir }}/pool/{{ item | basename }}"
     mode: 0755
@@ -23,8 +23,8 @@
     - ../templates/config/pool.d/*.conf
 
 
-- name: transfer php.ini php-fpm configuration
-  template:
+- name: Transfer php.ini php-fpm configuration
+  ansible.builtin.template:
     src: config/php.ini
     dest: "{{ php_config_dir }}/php.ini"
     mode: 0755

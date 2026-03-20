@@ -1,16 +1,16 @@
 ---
-- name: restart php
-  service:
-    name: php
+- name: Restart php
+  ansible.builtin.service:
+    name: Php
     state: restarted
     enabled: true
 
-- name: start php
-  service:
-    name: php
+- name: Start php
+  ansible.builtin.service:
+    name: Php
     state: started
 
-- name: reload php
-  service:
-    name: php
+- name: Reload php
+  ansible.builtin.service:
+    name: Php
     state: reloaded

@@ -1,12 +1,12 @@
 ---
 
-- name: setup group
-  group:
+- name: Setup group
+  ansible.builtin.group:
     name: "{{ php_group }}"
     system: true
 
-- name: setup user
-  user:
+- name: Setup user
+  ansible.builtin.user:
     name: "{{ php_user }}"
     system: true
     group: "{{ php_group }}"

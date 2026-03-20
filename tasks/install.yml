@@ -1,15 +1,15 @@
 ---
 
-- name: copy php script
-  template:
+- name: Copy php script
+  ansible.builtin.template:
     src: "php"
     dest: /usr/local/bin/php
     mode: 0755
     owner: root
     group: root
 
-- name: copy php script
-  template:
+- name: Copy php script
+  ansible.builtin.template:
     src: "php.service"
     dest: /etc/systemd/system/php.service
     mode: 0644
